@@ -1,7 +1,0 @@
-<!--pages/nociceDetail/nociceDetail.wxml-->
-<view class="container">
-    <view class="n-title">{{noticeDetail.title}}</view>
-    <view class="n-time">{{noticeDetail.time}}</view>
-    <image class="n-img" src="{{noticeDetail.cover}}" mode="aspectFill"></image>
-    <view class="n-text" wx:for="{{content}}">{{item}}</view>
-</view>
