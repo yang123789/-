@@ -1,0 +1,88 @@
+/* pages/myReading/myReading.wxss */
+.reading{
+    width:100%;
+    display: none;
+}
+.reading .reading-item{
+   padding:20rpx;
+    border-bottom:1rpx solid #eee;
+    overflow: hidden;
+}
+.reading .reading-item .left{
+    width:246rpx;
+    height:196rpx;
+    border:2rpx solid #eee;
+    float: left;
+}
+.reading .reading-item .right{
+    width:434rpx;
+    height:196rpx;
+    float: right;
+    position:relative;
+}
+.reading .reading-item .right .title{
+    font-size:28rpx;
+    color:#636363;
+    margin-top:20rpx;
+    margin-bottom:20rpx;
+    overflow: hidden;/*超出部分隐藏*/
+    white-space: nowrap;/*不换行*/
+    text-overflow:ellipsis;/*超出部分文字以...显示*/
+}
+.reading .reading-item .right .time image{
+    width:23rpx;
+    height:23rpx;
+    margin-right:10rpx;
+    vertical-align: middle;
+}
+.reading .reading-item .right .time{
+    line-height: 24rpx;
+    margin-bottom:10rpx;
+}
+.reading .reading-item .right .dw{
+    line-height: 24rpx;
+}
+.reading .reading-item .right .time text{
+    font-size:22rpx;
+    color:#bababa;
+    vertical-align:middle;
+}
+.reading .reading-item .right .dw image{
+    width:17rpx;
+    height:23rpx;
+    margin-right:10rpx;
+    vertical-align: middle;
+}
+.reading .reading-item .right .dw text{
+    font-size:22rpx;
+    color:#bababa;
+    vertical-align: middle;
+}
+.reading .reading-item .right .state{
+    position:absolute;
+    bottom:0rpx;
+    right:0;
+    text-align: right;
+}
+.reading .reading-item .right .state .end{
+    font-size:24rpx;
+    color:#bababa;
+}
+.reading .reading-item .right .state .green{
+    font-size:24rpx;
+    color:#396d5f;
+}
+.reading .reading-item .right .state .start{
+    font-size: 24rpx;
+    color:#f93636;
+}
+.noactive{
+    padding-top:40%;
+    font-size:30rpx;
+    color:#666;
+    width:100%;
+    text-align: center;
+}
+.blocks{
+    display: block;
+}

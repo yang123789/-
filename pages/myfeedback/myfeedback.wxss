@@ -1,0 +1,26 @@
+/* pages/myfeedback/myfeedback.wxss */
+page{
+    background:#f8f8f8;
+}
+.feedbox{
+    width:100%;
+    padding-top:30rpx;
+}
+.feedback-list{
+    padding:0rpx 30rpx;
+}
+.feedback-list .feedback-item{
+    background:white;
+    margin-bottom:30rpx;
+    border-radius:10rpx;
+    padding:20rpx;
+}
+.feedback-list .feedback-item .content{
+    font-size:30rpx;
+    color:#666;
+    margin-bottom:10rpx;
+}
+.feedback-list .feedback-item .time{
+    font-size:28rpx;
+    color:#999;
+}

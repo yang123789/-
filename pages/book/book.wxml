@@ -1,0 +1,125 @@
+<!--pages/book/book.wxml-->
+<view class="container">
+    <view class="head">
+        <view class="left">
+            <image src="https://lg-5b8938g4-1256973110.cos.ap-shanghai.myqcloud.com/zye.png"></image>
+            <text>木耳读书</text>
+        </view>
+        <view class="right">
+            <view bindtap="gomine">
+                <image src="{{avatar}}"></image>
+            </view>
+        </view>
+    </view>
+    <view class="banner">
+        <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}"  indicator-active-color="#396d5f">
+            <block wx:for="{{imgUrls}}">
+                <swiper-item>
+                    <image src="{{item.image}}" class="slide-image" mode="aspectFill"/>
+                </swiper-item>
+            </block>
+            </swiper>
+    </view>
+    <view class="matter">
+        <!-- <view class="title">
+            <image src="https://lg-5b8938g4-1256973110.cos.ap-shanghai.myqcloud.com/ds.png"></image>
+            <text>小木耳读书</text>
+        </view> -->
+        <view class="nav">
+            <view class="nav-item {{currentTab==1 ? 'active' : ''}}"  data-current="1" bindtap="swichNav">目录</view>
+            <view class="nav-item {{currentTab==2 ? 'active' : ''}}"  data-current="2" bindtap="swichNav">活动</view>
+        </view>
+        <view class="b-lists">
+            <view class="directory {{currentTab==1 ? '' : 'hide'}}">
+                <view class="d-matter">
+                    <navigator class="d-item" url="../guoxue/guoxue">
+                        <image src="https://lg-5b8938g4-1256973110.cos.ap-shanghai.myqcloud.com/dz.jpg" class="d-left"></image>
+                        <view class="d-right">
+                            <view class="words">小木耳国学堂</view>
+                            <view class="d-bottom">
+                                <image src="https://lg-5b8938g4-1256973110.cos.ap-shanghai.myqcloud.com/ti.png"></image>
+                                <text wx:if="{{listenNum.num1}}">{{listenNum.num1}}</text>
+                                <text wx:else>0</text>
+                            </view>
+                        </view>
+                    </navigator>
+                    <navigator class="d-item" url="../jiezi/jiezi">
+                        <image src="https://lg-5b8938g4-1256973110.cos.ap-shanghai.myqcloud.com/dz1.jpg" class="d-left"></image>
+                        <view class="d-right">
+                            <view class="words">小木耳解字馆</view>
+                            <view class="d-bottom">
+                                <image src="https://lg-5b8938g4-1256973110.cos.ap-shanghai.myqcloud.com/ti.png"></image>
+                                <text wx:if="{{listenNum.num2}}">{{listenNum.num2}}</text>
+                                <text wx:else>0</text>
+                            </view>
+                        </view>
+                    </navigator>
+                     <navigator class="d-item" url="../shuji/shuji">
+                        <image src="https://lg-5b8938g4-1256973110.cos.ap-shanghai.myqcloud.com/dz2.jpg" class="d-left"></image>
+                        <view class="d-right">
+                            <view class="words">木耳书记</view>
+                            <view class="d-bottom">
+                                <image src="https://lg-5b8938g4-1256973110.cos.ap-shanghai.myqcloud.com/ti.png"></image>
+                                <text wx:if="{{listenNum.num3}}">{{listenNum.num3}}</text>
+                                <text wx:else>0</text>
+                            </view>
+                        </view>
+                    </navigator>
+                   <navigator class="d-item" url="../shige/shige">
+                        <image src="https://lg-5b8938g4-1256973110.cos.ap-shanghai.myqcloud.com/dz3.jpg" class="d-left"></image>
+                        <view class="d-right">
+                            <view class="words">小木耳诗歌会</view>
+                            <view class="d-bottom">
+                                <image src="https://lg-5b8938g4-1256973110.cos.ap-shanghai.myqcloud.com/ti.png"></image>
+                                <text wx:if="{{listenNum.num4}}">{{listenNum.num4}}</text>
+                                <text wx:else>0</text>
+                            </view>
+                        </view>
+                    </navigator>
+                    
+                      <navigator class="d-item" url="../cuicuidu/cuicuidu">
+                        <image src="https://lg-5b8938g4-1256973110.cos.ap-shanghai.myqcloud.com/dz5.jpg" class="d-left"></image>
+                        <view class="d-right">
+                            <view class="words">小木耳脆脆读</view>
+                            <view class="d-bottom">
+                                <image src="https://lg-5b8938g4-1256973110.cos.ap-shanghai.myqcloud.com/ti.png"></image>
+                                <text wx:if="{{listenNum.num5}}">{{listenNum.num5}}</text>
+                                <text wx:else>0</text>
+                            </view>
+                        </view>
+                    </navigator>
+                    <navigator class="d-item" url="../zuowen/zuowen">
+                        <image src="https://lg-5b8938g4-1256973110.cos.ap-shanghai.myqcloud.com/dz4.jpg" class="d-left"></image>
+                        <view class="d-right">
+                            <view class="words">小木耳作文家</view>
+                            <view class="d-bottom">
+                                <image src="https://lg-5b8938g4-1256973110.cos.ap-shanghai.myqcloud.com/ti.png"></image>
+                                <text wx:if="{{listenNum.num6}}">{{listenNum.num6}}</text>
+                                <text wx:else>0</text>
+                            </view>
+                        </view>
+                    </navigator>
+                     <navigator class="d-item" url="../audio/audio">
+                        <image src="https://lg-5b8938g4-1256973110.cos.ap-shanghai.myqcloud.com/dz6.jpg" class="d-left"></image>
+                        <view class="d-right">
+                            <view class="words">小木耳广播台</view>
+                            <view class="d-bottom">
+                                <image src="https://lg-5b8938g4-1256973110.cos.ap-shanghai.myqcloud.com/ti.png"></image>
+                                <text wx:if="{{listenNum.num7}}">{{listenNum.num7}}</text>
+                                <text wx:else>0</text>
+                            </view>
+                        </view>
+                    </navigator>
+                </view>
+            </view>
+            <view class="act {{currentTab==2 ? '' : 'hide'}}">
+                <view class="d-matter">
+                    <view class="d-item" wx:for="{{act}}" bindtap="goact" data-dtype="{{item.dtype}}">
+                        <image src="https://lg-5b8938g4-1256973110.cos.ap-shanghai.myqcloud.com/ti.png" class="act-left"></image>
+                        <text class="act-right">{{item.type}}</text>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,72 @@
+/* pages/integral/integral.wxss */
+.integral{
+    width:100%;
+    background:-moz-linear-gradient(top, #396d5f, #6da97f);  
+    background:-webkit-gradient(linear, 0 0, 0 bottom, from(#396d5f), to(#6da97f));  
+    background:-o-linear-gradient(top, #396d5f, #6da97f); 
+    padding-top:60rpx;
+    padding-bottom:40rpx;
+}
+.integral .num{
+    font-size:36rpx;
+    color:#ffffff;
+    text-align: center;
+    margin-bottom:38rpx;
+}
+.integral .num text{
+    font-size:72rpx;
+}
+.integral .word{
+    font-size:30rpx;
+    color:#ffffff;
+    text-align: center;
+}
+.intergral-record{
+    width:100%;
+}
+.intergral-record .words{
+    width:100%;
+    overflow: hidden;
+    height:82rpx;
+    line-height: 82rpx;
+    border-bottom:10rpx solid #e8e8e8;
+}
+.intergral-record .words image{
+    width:37rpx;
+    height:37rpx;
+    margin-left:20rpx;
+    margin-right:10rpx;
+    vertical-align: middle;
+}
+.intergral-record .words text{
+    font-size:30rpx;
+    color:#396d5f;
+}
+.intergral-record .lists .i-item{
+    width:100%;
+    position: relative;
+    border-bottom: 1rpx solid #eee;
+}
+.intergral-record .lists .i-item .left{
+    padding-left:30rpx;
+    padding-right:110rpx;
+    padding-top:20rpx;
+    padding-bottom: 20rpx;
+}
+.intergral-record .lists .i-item .left .title{
+    font-size:30rpx;
+    color:#323232;
+    margin-bottom:10rpx;
+}
+.intergral-record .lists .i-item .left .time{
+    font-size:24rpx;
+    color:#bebebe;
+}
+.intergral-record .lists .i-item .right{
+    position:absolute;
+    font-size:30rpx;
+    color:#396d5f;
+    top: 50%;
+    right:20rpx;
+    transform: translate(0%,-50%);
+}

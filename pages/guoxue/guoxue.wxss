@@ -1,0 +1,460 @@
+/* pages/guoxue/guoxue.wxss */
+#myVideo{
+    width:100%;
+    height:426rpx;
+    background:#000;
+}
+.container{
+    display: none;
+}
+.blocks{
+    display: block;
+}
+.container1{
+    width:100%;
+}
+.container2{
+    width:100%;
+    padding-top:40%;
+    font-size:36rpx;
+    color:#333;
+    text-align: center;
+}
+.audioplay-box {
+    text-align: center;
+}
+#myAudio{
+    margin-top:30rpx;
+    margin-bottom:30rpx;
+    position:relative;
+}
+#myAudio .free-MusicProgress{
+  position: absolute;
+  width:100%;
+  bottom:1px;
+  background:#C3C3C3;
+}
+
+#myAudio .free-MusicProgress>view{
+  background:#396d5f;
+  height:2px;
+}
+.controls{
+    width:100%;
+    height:100%;
+}
+.audioplay-box{
+    width:100%;
+    position:relative;
+}
+.audioplay-box .audioplay-img{
+    width:750rpx;
+    height:425rpx;
+}
+.audioplay-box .audioplay-img image{
+    width:100%;
+    height:100%;
+    
+}
+.audio-controls{
+    width:100%;
+    position:absolute;
+    bottom:0;
+     height:70rpx;
+    line-height: 70rpx;
+   
+}
+.audio-controls .start-time{
+    font-size:24rpx;
+    color:#5b5b5b;
+    overflow: hidden;
+    width:86rpx;
+   float: left;
+   text-align: center;
+}
+.audio-controls .end-time{
+    font-size:24rpx;
+    color:#5b5b5b;
+    display: block;
+    float: left;
+    width:86rpx;
+    text-align: center;
+}
+.audio-controls image{
+    width:25rpx;
+    height:28rpx;
+    display: block;
+    float: left;
+    margin-top:20rpx;
+    margin-right:30rpx;
+    margin-left:30rpx;
+}
+.audio-controls .progress{
+    width:460rpx;
+    height:8rpx;
+    background:#7e7e7e;
+    border-radius:20rpx;
+    float: left;
+     margin-top:30rpx;
+}
+.audio-controls .progress .progress-bar{
+    background:#396d5f;
+    width:50%;
+    height:100%;
+    position:relative;
+    border-radius:20rpx;
+}
+.audio-controls .progress .progress-bar:after{
+    content:'';
+    position:absolute;
+    right:0;
+    width:12rpx;
+    height:12rpx;
+    background:#396d5f;
+    border-radius:50%;
+    top:-2rpx;
+    right:-7rpx;
+}
+.audio-controls  .hideplay{display: none;}
+.matter {
+    padding:20rpx;
+    background:#efefef;
+    position:relative;
+    width:710rpx;
+    display: block;
+    float: left;
+}
+.matter .bgimg{
+    position:absolute;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+}
+.matter .content{
+    text-indent:2em;
+    display: block;
+    font-size:30rpx;
+    color:#3d3d3d;
+    line-height: 40rpx;
+}
+.matter .title{
+    font-size:36rpx;
+    text-align: center;
+    color:#3d3c3c;
+    margin-bottom:10rpx;
+}
+.matter .author{
+    text-align: center;
+    font-size:24rpx;
+    color:#3d3c3c;
+    margin-bottom:12rpx;
+}
+.past-box{
+    width:100%;
+}
+.past{
+    padding:20rpx;
+}
+.past .title{
+    font-size:24rpx;
+    color:#717171;
+    text-align: center;
+    margin-bottom:20rpx;
+}
+.past .past-item{
+    width:100%;
+    overflow: hidden;
+    margin-bottom:20rpx;
+}
+.past .past-item:last-child{
+    margin-bottom:0rpx;
+}
+.past .past-item .left{
+    width:160rpx;
+    height:110rpx;
+    display: block;
+    float: left;
+}
+.past .past-item .right{
+    width:520rpx;
+    float: right;
+    font-size:24rpx;
+    color:#383838;
+    margin-top:14rpx;
+    line-height: 40rpx;
+    overflow:hidden; 
+    text-overflow:ellipsis;
+    display:-webkit-box; 
+    -webkit-box-orient:vertical;
+    -webkit-line-clamp:2; 
+}
+.contribute{
+    width:100%;
+}
+.contribute .title{
+    font-size:28rpx;
+    color:#424242;
+    padding-left:40rpx;
+    background:#e8e8e8;
+    line-height: 60rpx;
+}
+.audio-box{
+    width:250rpx;
+    height:60rpx;
+    position:relative;
+    border-radius:10rpx;
+}
+.contribute .left .audio-box{
+     background:#eff0f0;
+}
+.contribute .right .audio-box{
+     background:#396d5f;
+     float: right;
+}
+.audio-box .speak-style{
+    width:40rpx;
+    height:40rpx;
+    position:absolute;
+    top:8rpx;
+}
+.audio-box .speak-style image{
+    width:100%;
+    height:100%;
+    display: block;
+    position:absolute;
+    top:0;
+    left:0;
+}
+.contribute .left .audio-box .speak-style{
+    left:10rpx;
+}
+.contribute .right .audio-box .speak-style{
+    right:10rpx;
+}
+.audio-box .speak-style .yin{
+    display:none;
+}
+.contribute .matter1{
+    padding:20rpx;
+}
+.contribute .left,.contribute .right{
+    overflow: hidden;
+    margin-bottom:20rpx;
+}
+.contribute .left .uimg,.contribute .right .uimg{
+    width:60rpx;
+    height:60rpx;
+    display: block;
+   
+}
+.contribute .right .sound-style{
+    transform:rotate(180deg);
+-ms-transform:rotate(180deg); 	/* IE 9 */
+-moz-transform:rotate(180deg); 	/* Firefox */
+-webkit-transform:rotate(180deg); /* Safari 和 Chrome */
+-o-transform:rotate(180deg); 	/* Opera */
+}
+.contribute .left .uimg{
+     float: left;
+    margin-left:40rpx;
+}
+.contribute .right .uimg{
+     float: right;
+    margin-right:40rpx;
+}
+.contribute .left .c-audio{
+    width:600rpx;
+    float: right;
+}
+.contribute .right .c-audio{
+    width:600rpx;
+    float: left;
+}
+.contribute .left .time,.contribute .right .time{
+    font-size:20rpx;
+    color:#dddddd;
+    padding-top:8rpx;
+}
+.contribute .right .time{
+    text-align: right;
+    clear:both;
+}
+.say-btn{
+    width:115rpx;
+    height:115rpx;
+    margin:0 auto;
+    border-radius:50%;
+    background:#396d5f;
+    font-size:24rpx;
+    display: table;
+    color:white;
+    text-align: center;
+    box-shadow: 0rpx 0rpx 20rpx #396d5f;
+    margin-top:20rpx;
+}
+.say-btn text{
+    display: table-cell;
+    vertical-align: middle;
+}
+.speaking-style{
+    position:fixed;
+    bottom:40%;
+    width:180rpx;
+    height:180rpx;
+    left:50%;
+    margin-left:-90rpx;
+}
+.speaking-style image{
+    width:100%;
+    height:100%;
+}
+.composition{
+    width:100%;
+}
+
+
+
+.release{
+    position:fixed;
+    background:white;
+    border-top:1rpx solid #eee;
+    bottom:0;
+    left:0;
+   width:100%;
+   padding:15rpx 0;
+}
+.release input{
+    margin-left:15rpx;
+    width:510rpx;
+    height:70rpx;
+    float: left;
+    padding-left:10rpx;
+    padding-right:10rpx;
+    border:1rpx solid #eee;
+    border-radius:10rpx;
+}
+.release .release-btn{
+    margin-right:15rpx;
+    float: right;
+    width:175rpx;
+    height:70rpx;
+    text-align: center;
+    line-height: 70rpx;
+    background:#396d5f;
+    font-size:30rpx;
+    color: #fff;
+    border-radius:10rpx;
+}
+.no-past{
+    color:#666;
+    font-size:28rpx;
+    padding:40rpx 0;
+    text-align: center;
+}
+
+
+audio{
+  position: relative;
+}
+audio .free-MusicProgress{
+  position: absolute;
+  width:100%;
+left:0;
+  bottom:1px;
+  background:#C3C3C3;
+}
+audio .free-MusicProgress>view{
+  background:#48c23d;
+  height:2px;
+}
+.composition{
+    width:100%;
+}
+.composition-lists .composition-item{
+border-bottom:1rpx solid #eee;
+padding:20rpx;
+overflow: hidden;
+min-height:77rpx;
+}
+.composition-lists .composition-item .left{
+    width:120rpx;
+    height:120rpx;
+    border-radius:50%;
+    display: block;
+    float: left;
+}
+.composition-lists .composition-item .right{
+    width:540rpx;
+    float: right;
+}
+.composition-lists .composition-item .right .name{
+    font-size:30rpx;
+    color:#396d5f;
+    margin-bottom:10rpx;
+    margin-top:10rpx;
+}
+.composition-lists .composition-item .right .content{
+    font-size:24rpx;
+    color:#898989;
+    overflow:hidden; 
+    text-overflow:ellipsis;
+    display:-webkit-box; 
+    -webkit-box-orient:vertical;
+    -webkit-line-clamp:3; 
+}
+.release{
+    position:fixed;
+    background:white;
+    border-top:1rpx solid #eee;
+    bottom:0;
+    left:0;
+   width:100%;
+   padding:15rpx 0;
+   z-index:3;
+   }
+.release input{
+    margin-left:15rpx;
+    width:510rpx;
+    height:70rpx;
+    float: left;
+    padding-left:10rpx;
+    padding-right:10rpx;
+    border:1rpx solid #eee;
+    border-radius:10rpx;
+}
+.release .release-btn{
+    margin-right:15rpx;
+    float: right;
+    width:175rpx;
+    height:70rpx;
+    text-align: center;
+    line-height: 70rpx;
+    background:#396d5f;
+    font-size:30rpx;
+    color: #fff;
+    border-radius:10rpx;
+}
+
+.com-words{
+    font-size:32rpx;
+    color:#666;
+    line-height:80rpx;
+    background:#eee;
+}
+.com-words text{
+    margin-left:20rpx;
+}
+.release{
+    font-size:26rpx;
+    color:#666;
+    padding-left:10rpx;
+    padding-right:10rpx;
+}
+.nomess{
+    font-size:30rpx;
+    color: #666;
+    text-align: center;
+    padding-top:60rpx;
+    padding-bottom:60rpx;
+}

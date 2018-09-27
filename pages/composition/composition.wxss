@@ -1,0 +1,72 @@
+/* pages/composition/composition.wxss */
+.c-matter{
+    width:702rpx;
+    font-size:24rpx;
+    color:#898989;
+    background-image:url(https://lg-5b8938g4-1256973110.cos.ap-shanghai.myqcloud.com/kuang.png);
+    background-size:100% 39rpx;
+    overflow: hidden;
+    border-left:1rpx solid #93b4ab;
+    border-bottom: 1rpx solid #93b4ab;
+}
+.c-zw{
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.share-btn{
+    width:150rpx;
+    height:70rpx;
+    background:#396d5f;
+    color:white;
+    line-height: 70rpx;
+    padding:0;
+    margin-top:20rpx;
+    margin-bottom:20rpx;
+    font-size:30rpx;
+
+}
+.c-content{
+    overflow: hidden;
+     width:100%;
+}
+.zwtext{
+    display: block;
+    float: left;
+    height:39rpx;
+    line-height: 39rpx;
+    text-align: center;
+    margin:0;
+   padding:0;
+   width:5.55%;
+
+
+}
+.c-title{
+   overflow: hidden;
+   width:100%;
+}
+.author{
+    margin-top:40rpx;
+    margin-bottom: 20rpx;
+    width:100%;
+    overflow: hidden;
+}
+.author image{
+    width:60rpx;
+    height:60rpx;
+    display: inline-block;
+    margin-left:15rpx;
+    vertical-align: middle;
+    border-radius:50%;
+}
+.author text{
+    display: inline-block;
+    font-size:30rpx;
+    color:#396d5f;
+    vertical-align: middle;
+    margin-left:20rpx;
+}

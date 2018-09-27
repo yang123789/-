@@ -1,0 +1,103 @@
+<!--pages/shige/shige.wxml-->
+<view class="container {{book.Fungread!=''?'blocks':''}}">
+    <view class="container1" wx:if="{{book.Fungread!=null}}">
+        <view class="audioplay-box">
+        <audio poster="{{book.Fungread.cover}}" name="{{book.Fungread.stitle}}" author="{{book.Fungread.auther}}" src="{{book.Fungread.audio}}" id="myAudio" controls loop bindtimeupdate="MusicStart" bindended="MusicEnd">
+        <view class="free-MusicProgress">
+            <view style="width:{{progress}}%;"></view>
+        </view>
+        </audio>
+    </view>
+    <view class="matter">
+       <image class="bgimg" src="https://lg-5b8938g4-1256973110.cos.ap-shanghai.myqcloud.com/sg.png" mode="aspectFill"></image>
+        <view style="position:relative;z-index:2;">
+            <view class="title">{{book.Fungread.title}}</view>
+            <view class="author">作者：{{book.Fungread.auther}}</view>
+            <view class="content" wx:for="{{carrt}}">{{item}}</view>
+        </view>
+    </view>
+    <!--往期-->
+    <view class="past-box" >
+        <view class="past">
+            <view class="title">------------------------ 往期 ------------------------</view>
+             <view class="past-lists">
+                <block wx:if="{{book.old!=''}}">
+                    <view class="past-item" wx:for="{{book.old}}" bindtap="oldDetail" data-time="{{item.time}}">
+                        <image src="{{item.cover}}" class="left"></image>
+                        <view class="right">{{item.content}}</view>
+                    </view>
+                </block>
+                <block wx:else>
+                <view class="no-past" >您还没有往期节目哦~~</view>
+                </block>
+            </view>
+        </view>
+    </view>
+    <!--往期-->
+    <!--投稿-->
+    <view class="contribute" >
+        <view class="title">投稿</view>
+        <view class="matter1">
+        <block wx:if="{{list!=''}}">
+            <block wx:for="{{list}}">
+            <view class="left" wx:if="{{item.isme==0}}">
+                <image src="{{item.avatar}}" class="uimg"></image>
+                <view class="c-audio">
+                    <view class="audio-box" bindtap="playVoice" data-src="{{item.record}}" id="{{index}}" data-play="{{index==audioId?playbtn:playbtn1}}">
+                        <view  class="speak-style" wx:if="{{index==audioId}}">
+                            <image class="sound-style {{hide?'yin':''}}" src="https://lg-5b8938g4-1256973110.cos.ap-shanghai.myqcloud.com/dyuyin.png" ></image>
+                            <image wx:if="{{j>=0}}" class="sound-style" src="https://lg-5b8938g4-1256973110.cos.ap-shanghai.myqcloud.com/dyuyin1.png" ></image>
+                            <image wx:if="{{j>=1}}" class="sound-style" src="https://lg-5b8938g4-1256973110.cos.ap-shanghai.myqcloud.com/dyuyin2.png" ></image>
+                            <image wx:if="{{j>=2}}" class="sound-style" src="https://lg-5b8938g4-1256973110.cos.ap-shanghai.myqcloud.com/dyuyin3.png" ></image>
+                        </view>
+                        <view  class="speak-style" wx:else>
+                            <image class="sound-style" src="https://lg-5b8938g4-1256973110.cos.ap-shanghai.myqcloud.com/dyuyin.png" ></image>
+                        </view>
+                    </view>
+                    <view class="time">时间：{{item.time}}</view>
+                </view>
+            </view>
+
+            <view class="right" wx:else>
+                <image src="{{item.avatar}}" class="uimg"></image>
+                <view class="c-audio">
+                    <view class="audio-box" bindtap="playVoice" data-src="{{item.record}}" id="{{index}}" data-play="{{index==audioId?playbtn:playbtn1}}">
+                        <view  class="speak-style" wx:if="{{index==audioId}}">
+                            <image class="sound-style {{hide?'yin':''}}" src="https://lg-5b8938g4-1256973110.cos.ap-shanghai.myqcloud.com/yuyin.png" ></image>
+                            <image wx:if="{{j>=0}}" class="sound-style" src="https://lg-5b8938g4-1256973110.cos.ap-shanghai.myqcloud.com/yuyin1.png" ></image>
+                            <image wx:if="{{j>=1}}" class="sound-style" src="https://lg-5b8938g4-1256973110.cos.ap-shanghai.myqcloud.com/yuyin2.png" ></image>
+                            <image wx:if="{{j>=2}}" class="sound-style" src="https://lg-5b8938g4-1256973110.cos.ap-shanghai.myqcloud.com/yuyin3.png" ></image>
+                        </view>
+                        <view  class="speak-style" wx:else>
+                            <image class="sound-style" src="https://lg-5b8938g4-1256973110.cos.ap-shanghai.myqcloud.com/yuyin.png" ></image>
+                        </view>
+                    </view>
+                    <view class="time">时间：{{item.time}}</view>
+                    <text class="ch" wx:if="{{item.is_remove==1}}" bindtap="revoke" data-recordId="{{item.id}}">(三分钟内) <text>撤回</text></text>
+                </view>
+            </view>
+            </block>
+            </block>
+            <block wx:else>
+                <view class="nog">
+                    <text>还没有人投稿哦~</text>
+                </view>
+            </block>
+            <view  wx:if="{{isSpeaking}}"  class="speaking-style">
+                    <image src="https://lg-5b8938g4-1256973110.cos.ap-shanghai.myqcloud.com/ly.png" ></image>
+            </view>
+            <view class="say">
+                <view class="say-btn"  bindtouchstart="touchdown" bindtouchend="touchup" wx:if="{{setting}}">
+                    <text>按住\n说话</text>
+                </view>
+                <button class="say-btn say-btn1" open-type="openSetting" wx:else bindtap="setting">
+                    按住\n说话
+                </button>
+            </view>
+        </view>
+    </view>
+    <!--投稿-->
+    </view>
+    <view wx:else class="container2">活动还未开始~</view>
+</view>
+

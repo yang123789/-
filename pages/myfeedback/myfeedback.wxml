@@ -1,0 +1,11 @@
+<!--pages/myfeedback/myfeedback.wxml-->
+<view class="container">
+    <view class="feedbox">
+        <view class="feedback-list">
+            <view class="feedback-item" wx:for="{{feedback}}">
+                <view class="content">{{item.content}}</view>
+                <view class="time">{{item.time}}</view>
+            </view>
+        </view>
+    </view>
+</view>

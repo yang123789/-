@@ -1,0 +1,76 @@
+{
+  "pages": [
+      "pages/user/user",
+      "pages/audio/audio",
+      "pages/index/index",
+      "pages/sign/sign",
+      
+      "pages/study/study",
+    "pages/read/read",
+    "pages/book/book",
+    "pages/shige/shige",
+    "pages/sjtg/sjtg",
+    "pages/apply/apply",
+    "pages/readingDetail/readingDetail",
+    "pages/myfeedback/myfeedback",
+    "pages/giving/giving",
+    "pages/records/records",
+    "pages/logs/logs",
+    "pages/notice/notice",
+    "pages/jiezi/jiezi",
+    "pages/guoxue/guoxue",
+    "pages/zuowen/zuowen",
+    
+    "pages/shuji/shuji",
+    "pages/fabu/fabu",
+    "pages/cuicuidu/cuicuidu",
+    "pages/share/share",
+    "pages/composition/composition",
+    "pages/myReading/myReading",
+    "pages/detail/detail",
+    "pages/ongoing/ongoing",
+    "pages/full/full",
+    "pages/fullAnswer/fullAnswer",
+    "pages/noapply/noapply",
+    "pages/mine/mine",
+    "pages/todayNotes/todayNotes",
+    "pages/knowledge/knowledge",
+    "pages/notes/notes",
+    "pages/feedback/feedback",
+    "pages/mybuying/mybuying",
+    "pages/integral/integral",
+    "pages/myActivity/myActivity",
+    "pages/nociceDetail/nociceDetail"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#396d5f",
+    "navigationBarTitleText": "木耳读书",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "selectedColor": "#4e7a6e",
+    "backgroundColor": "#fff",
+    "borderStyle": "#e72b2b",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "imgs/sfoot1.png",
+        "selectedIconPath": "imgs/foot1.png"
+      },
+      {
+        "pagePath": "pages/notice/notice",
+        "text": "通知中心",
+        "iconPath": "imgs/sfoot2.png",
+        "selectedIconPath": "imgs/foot2.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "会员中心",
+        "iconPath": "imgs/sfoot3.png",
+        "selectedIconPath": "imgs/foot3.png"
+      }
+    ]
+  }
+}

@@ -1,0 +1,44 @@
+/* pages/fabu/fabu.wxss */
+.container .matter{
+    width:100%;
+}
+.container .matter .f-item{
+    padding:30rpx 30rpx 0 0rpx;
+    overflow: hidden;
+}
+.container .matter .f-item text{
+    display: block;
+    float: left;
+    width:18%;
+    font-size:30rpx;
+    line-height: 80rpx;
+    text-align: right;
+}
+.container .matter .f-item input{
+    width:76%;
+    float: right;
+    height:80rpx;
+    line-height: 80rpx;
+    border:1rpx solid #eee;
+    padding:0 2%;
+    font-size:30rpx;
+}
+.container .matter .f-item textarea{
+     width:76%;
+    float: right;
+    height:400rpx;
+    line-height: 50rpx;
+    border:1rpx solid #eee;
+    padding:2%;
+    font-size:30rpx;
+}
+.container .matter button{
+    width:280rpx;
+    height:80rpx;
+    line-height: 80rpx;
+    background:#396d5f;
+    padding:0;
+    color:white;
+    margin-top:60rpx;
+    font-size:32rpx;
+}
