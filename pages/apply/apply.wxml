@@ -1,0 +1,37 @@
+<!--pages/apply/apply.wxml-->
+<view class="container">
+    <view class="act-info">
+        <image src="{{readDeatil.cover}}" class="img" mode='aspectFill'></image>
+        <view class="title">{{readDeatil.title}}</view>
+        <view class="price">￥{{readDeatil.price}}</view>
+    </view>
+    <view class="act-info1">
+        <view class="start_time">开始时间：{{readDeatil.start_time}}</view>
+        <view class="end_time">结束时间：{{readDeatil.end_time}}</view>
+        <view class="adress">地址：{{readDeatil.address}}</view>
+    </view>
+    <view class="act-info2">
+        <view class="words"><text>活动详情</text></view>
+        <view class="act-detail" >
+            <view class="act-ditem" wx:for="{{content}}">{{item}}</view>
+        </view>
+    </view>
+   
+    <view class="act-info2">
+        <view class="words"><text>报名参加</text></view>
+    <view class="apply-infor">
+        <form bindsubmit="formSubmit">
+            <view class="section">
+                <text>姓名：</text>
+                <input placeholder="请输入姓名" name="name" type="text"/>
+            </view>
+            <view class="section">
+                <text>电话：</text>
+                <input placeholder="请输入电话" name="tel" type="number"/>
+            </view>
+            <view class="sel-cupton {{past?'blocks':''}}" wx:if="{{past.sleep!=0}}"><checkbox checked="{{schecked}}" data-value="{{svalue}}" bindtap="check"></checkbox>您有{{past.sleep}}只羊,可抵扣{{(past.sleep)*10}}元,读书会最低价格0.01元</view>
+            <button form-type="submit" class="applybtn" disabled='{{applybtn}}'>报名参加</button>
+        </form>
+    </view>
+    </view>
+</view>

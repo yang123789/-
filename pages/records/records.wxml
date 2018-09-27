@@ -1,0 +1,21 @@
+<!--pages/records/records.wxml-->
+<view class="container">
+    <view class="records-lists">
+        <view class="records-item" wx:if="{{records}}" >
+            <view wx:for="{{records}}">
+                <view class="name">{{item.name}}</view>
+                <view class="price">价格：{{item.price}}</view>
+                <button wx:if="{{item.use==1}}" open-type="share" data-listid="{{item.id}}">赠送</button>
+                <button wx:else>已领取</button>
+            </view>
+        </view>
+        <view class="records-item" wx:else >
+            <view wx:for="{{lrecords}}">
+                <view class="name">{{item.name}}</view>
+                <view class="price">价格：{{item.price}}</view>
+                <button wx:if="{{item.use==1}}" data-listid="{{item.id}}" bindtap="Receivevip">领取</button>
+                <button wx:else>已领取</button>
+            </view>
+        </view>
+    </view>
+</view>

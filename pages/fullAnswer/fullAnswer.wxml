@@ -1,0 +1,43 @@
+<!--pages/fullAnswer/fullAnswer.wxml-->
+<view class="container">
+    <view class="full-img">
+        <image src="{{dialogue.cover}}" mode="aspectFill"></image>
+    </view>
+     <view class="matter">
+        <view class="fa-lists" wx:for="{{dialogue.courseCont}}">
+            <view class="fa-item left" wx:if="{{item.islecturer==1}}">
+                <image class="timg" src="{{item.avatar}}"></image>
+                <view class="dialogue">{{item.content}}</view>
+                <view class="handle">
+                    <image src="https://lg-5b8938g4-1256973110.cos.ap-shanghai.myqcloud.com/bj.png" class="note"  bindtap="note" data-id="{{item.id}}" data-note="{{item.note_state}}"></image>
+                        <image src="https://lg-5b8938g4-1256973110.cos.ap-shanghai.myqcloud.com/sc.png" class="collect" wx:if="{{item.collect==0}}" bindtap="collect" data-id="{{item.id}}"></image>
+                        <image src="https://lg-5b8938g4-1256973110.cos.ap-shanghai.myqcloud.com/sc1.png" class="collect" wx:if="{{item.collect==1}}" bindtap="collect" data-id="{{item.id}}"></image>
+                </view>
+            </view>
+            <view class="fa-item right" wx:else>
+                <view class="handle">
+                        
+                        <image src="https://lg-5b8938g4-1256973110.cos.ap-shanghai.myqcloud.com/sc.png" class="collect" wx:if="{{item.collect==0}}" bindtap="collect" data-id="{{item.id}}"></image>
+                        <image src="https://lg-5b8938g4-1256973110.cos.ap-shanghai.myqcloud.com/sc1.png" class="collect" wx:if="{{item.collect==1}}" bindtap="collect" data-id="{{item.id}}"></image>
+                        <image src="https://lg-5b8938g4-1256973110.cos.ap-shanghai.myqcloud.com/bj.png" class="note"  bindtap="note" data-id="{{item.id}}" data-note="{{item.note_state}}"></image>
+
+                </view>
+                <view class="dialogue">{{item.content}}</view>
+                <image class="timg" src="{{item.avatar}}"></image>
+               
+            </view>
+        </view>
+    </view>
+</view>
+<view class="none"></view>
+     <view class="pin" bindtap="clickbtn">
+        <image src="https://lg-5b8938g4-1256973110.cos.ap-shanghai.myqcloud.com/anniu.png"></image>
+     </view>
+     <view class="note-mask {{maskshow?'maskshow':''}}">
+        <view class="note-box">
+            <image class="close" src="https://lg-5b8938g4-1256973110.cos.ap-shanghai.myqcloud.com/close.png" bindtap="closenote"></image>
+            <textarea class="{{textarea?'maskshow':''}}" disabled="disabled">{{notetext}}</textarea>
+            <textarea placeholder="请输入笔记内容" bindinput="getNoteText" class="{{textarea1?'maskshow':''}}" value="{{note}}"></textarea>
+            <button bindtap="sub" class="{{sub?'maskshow':''}}">提交</button>
+        </view>
+     </view>

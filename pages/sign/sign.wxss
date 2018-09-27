@@ -1,0 +1,244 @@
+/* pages/sign/sign.wxss */
+page{
+    background:#a2dffc;
+}
+.rules-mask{
+    width:100%;
+    height:100%;
+    position: fixed;
+    z-index:99;
+    background: rgba(0, 0, 0, 0.4);
+    display: none;
+}
+.rulesblocks{
+    display: block;
+}
+.rules-mask .rules-box{
+    width:600rpx;
+    height:auto;
+    margin-top:30%;
+    background: white;
+    border-radius:20rpx;
+    margin-left:auto;
+    margin-right: auto;
+    padding:30rpx;
+    position: relative;
+}
+.rules-mask .rules-box .rules-title{
+    font-size:36rpx;
+    color:#396d5f;
+    margin-bottom: 10rpx;
+}
+.rules-mask .rules-box .rules-matter{
+    font-size: 30rpx;
+    color: #333;
+    line-height:50rpx;
+}
+.rules-mask .rules-box .rules-matter text{
+    display: block;
+}
+.rules{
+    position: absolute;
+    left:40rpx;
+    top:60rpx;
+    z-index: 99;
+}
+.rules image{
+    width:90rpx;
+    height:90rpx;
+}
+.cloud{
+    width:100%;
+    position:relative;
+}
+.cloud image{
+    width:296rpx;
+    height:107rpx;
+    position:absolute;
+    display: block;
+}
+.cloud .animate1{
+    animation:myfirst1 3s linear 2s infinite alternate;
+    /* Firefox: */
+    -moz-animation:myfirst1 3s linear 2s infinite alternate;
+    /* Safari and Chrome: */
+    -webkit-animation:myfirst1 3s linear 2s infinite alternate;
+    /* Opera: */
+    -o-animation:myfirst1 3s linear 2s infinite alternate;
+    left:300rpx;
+    top:60rpx;
+}
+.cloud .animate2{
+    animation:myfirst2 7s linear 2s infinite alternate;
+    /* Firefox: */
+    -moz-animation:myfirst2 7s linear 2s infinite alternate;
+    /* Safari and Chrome: */
+    -webkit-animation:myfirst2 7s linear 2s infinite alternate;
+    /* Opera: */
+    -o-animation:myfirst2 7s linear 2s infinite alternate;
+   left:0rpx; top:150rpx;
+}
+.cloud .animate3{
+    animation:myfirst3 4s linear 2s infinite alternate;
+    /* Firefox: */
+    -moz-animation:myfirst3 4s linear 2s infinite alternate;
+    /* Safari and Chrome: */
+    -webkit-animation:myfirst3 4s linear 2s infinite alternate;
+    /* Opera: */
+    -o-animation:myfirst3 4s linear 2s infinite alternate;
+    left:-80rpx; top:190rpx;
+}
+.cloud .animate4{
+    animation:myfirst4 2s linear 2s infinite alternate;
+    /* Firefox: */
+    -moz-animation:myfirst4 2s linear 2s infinite alternate;
+    /* Safari and Chrome: */
+    -webkit-animation:myfirst4 2s linear 2s infinite alternate;
+    /* Opera: */
+    -o-animation:myfirst4 2s linear 2s infinite alternate;
+    left:-122rpx; top:400rpx;
+}
+.cloud .animate5{
+    animation:myfirst5 2s linear 2s infinite alternate;
+    /* Firefox: */
+    -moz-animation:myfirst5 2s linear 2s infinite alternate;
+    /* Safari and Chrome: */
+    -webkit-animation:myfirst5 2s linear 2s infinite alternate;
+    /* Opera: */
+    -o-animation:myfirst5 2s linear 2s infinite alternate;
+    right:0rpx; top:350rpx;
+}
+@keyframes myfirst1
+{
+0%   { left:300rpx; top:60rpx;}
+100% { left:454rpx; top:60rpx;}
+}
+@keyframes myfirst2
+{
+0%   {  left:0rpx; top:150rpx;}
+100% { left:454rpx; top:150rpx;}
+}
+@keyframes myfirst3
+{
+0%   { left:-80rpx; top:190rpx;}
+100% { left:454rpx; top:190rpx;}
+}
+@keyframes myfirst4
+{
+0%   { left:-122rpx; top:400rpx;}
+100% { left:100rpx; top:400rpx;}
+}
+@keyframes myfirst5
+{
+0%   { right:0rpx; top:350rpx;}
+100% { right:160rpx; top:350rpx;}
+}
+.foot{
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+}
+.foot image{
+    display: block;
+    width:100%;
+    height:388rpx;
+}
+.sign-lists{
+    position:absolute;
+    right:20rpx;
+    text-align: center;
+    top:60rpx;
+}
+.sign-lists image{
+    width:90rpx;
+    height:90rpx;
+    display: block;
+    margin:0 auto;
+}
+.sign-lists .sign-item{
+    margin-bottom: 30rpx;
+}
+.sign-lists .sign-item view{
+    font-size:26rpx;
+    color:#ffffff;
+    line-height: 40rpx;
+}
+.task-mask{
+    width:100%;
+    height:100%;
+    background:rgba(45, 45, 45, 0.6);
+    position:fixed;
+    z-index:999;
+    display: none;
+}
+.task-mask .task-box{
+    width:80%;
+    padding:30rpx;
+    margin:0 auto;
+    background:white;
+    border-radius:20rpx;
+    margin-top:30%;
+    position:relative;
+}
+.task-mask .task-box .word{
+    font-size:28rpx;
+    color:#396d5f;
+    margin-bottom:20rpx;
+}
+.task-mask .task-box .title{
+    font-size:24rpx;
+    color:#494949;
+    margin-bottom:30rpx;
+}
+.task-mask .task-box .task-lists{
+    width:100%;
+    overflow: hidden;
+}
+.task-mask .task-box .task-lists .task-item{
+    width:50%;
+    float: left;
+    font-size:24rpx;
+    color:#396d5f;
+    margin-bottom:20rpx;
+}
+.task-mask .task-box .task-lists checkbox .wx-checkbox-input{
+    width:40rpx;
+    height:40rpx;
+}
+.task-mask .task-box .task-lists checkbox .wx-checkbox-input.wx-checkbox-input-checked::before{
+    width:38rpx;
+    height:38rpx;
+    color:#396d5f;
+    margin-top:-6rpx;
+    margin-left:-5rpx;
+}
+.yesbtn {
+    padding-top:30rpx;
+}
+.yesbtn button{
+    padding:0;
+    width:180rpx;
+    height:50rpx;
+    background:#396d5f;
+    color:white;
+    font-size:24rpx;
+    line-height: 50rpx;
+}
+.close{
+    width:60rpx;
+    height:60rpx;
+    position:absolute;
+    top:-10rpx;
+    right:-10rpx;
+}
+.showmask{
+    display: block;
+}
+.closerules{
+    width:60rpx;
+    height:60rpx;
+    position: absolute;
+    top:-10rpx;
+    right:-10rpx;
+}

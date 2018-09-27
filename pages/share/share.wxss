@@ -1,0 +1,20 @@
+/* pages/share/share.wxss */
+page{
+    background:#ffffff;
+}
+.canvasimg{
+    margin-left:auto;
+    margin-right:auto;
+}
+.card-box{padding-bottom:30rpx;}
+.savebtn{
+    width:200rpx;
+    height:70rpx;
+    padding:0;
+    background:#396d5f;
+    line-height: 70rpx;
+    color:white;
+    font-size:30rpx;
+    margin-top:30rpx;
+}
+

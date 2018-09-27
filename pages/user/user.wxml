@@ -1,0 +1,68 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo">
+            <block wx:if="{{createtime==0}}" >
+            <image class="userinfo-avatar" src="https://lg-5b8938g4-1256973110.cos.ap-shanghai.myqcloud.com/userimg.png" mode="cover"></image>            
+            </block>
+            <block wx:else>
+                <image bindtap="bindViewTap" class="userinfo-avatar" src="{{avatar}}" mode="cover"></image>
+                <text class="userinfo-nickname">{{nickname}}</text>
+                <button class="v-text {{group.group_id?'blocks':''}}" wx:if="{{group.group_id==1}}" disabled='{{buyvipbtn}}' bindtap='BuyVip'>成为会员</button>
+                <button class="v-text {{group.group_id?'blocks':''}}"  wx:else>木耳读书会员</button>
+            </block>
+  </view>
+
+  <!--列表-->
+  <view class="user-lists">
+    <view class="user-item" data-url="../myActivity/myActivity" bindtap="Go">
+        <view class="left">
+            <image src="https://lg-5b8938g4-1256973110.cos.ap-shanghai.myqcloud.com/u1.png"></image>
+            <text>我的活动</text>
+        </view>
+        <image src="https://lg-5b8938g4-1256973110.cos.ap-shanghai.myqcloud.com/go.png" class="right"></image>
+    </view>
+    <view class="user-item" data-url="../integral/integral"  bindtap="Go">
+        <view class="left">
+            <image src="https://lg-5b8938g4-1256973110.cos.ap-shanghai.myqcloud.com/u2.png"></image>
+            <text>我的积分</text>
+        </view>
+        <image src="https://lg-5b8938g4-1256973110.cos.ap-shanghai.myqcloud.com/go.png" class="right"></image>
+    </view>
+    <view class="user-item" data-url="../mybuying/mybuying"  bindtap="Go">
+        <view class="left">
+            <image src="https://lg-5b8938g4-1256973110.cos.ap-shanghai.myqcloud.com/u3.png"></image>
+            <text>我的已购</text>
+        </view>
+        <image src="https://lg-5b8938g4-1256973110.cos.ap-shanghai.myqcloud.com/go.png" class="right"></image>
+    </view>
+    <view class="user-item" data-url="../records/records" bindtap="Go">
+        <view class="left">
+            <image src="https://lg-5b8938g4-1256973110.cos.ap-shanghai.myqcloud.com/u4.png"></image>
+            <text>赠送记录</text>
+        </view>
+        <image src="https://lg-5b8938g4-1256973110.cos.ap-shanghai.myqcloud.com/go.png" class="right"></image>
+    </view>
+    <view class="user-item" data-url="../myReading/myReading"  bindtap="Go">
+        <view class="left">
+            <image src="https://lg-5b8938g4-1256973110.cos.ap-shanghai.myqcloud.com/u5.png"></image>
+            <text>我的读书会</text>
+        </view>
+        <image src="https://lg-5b8938g4-1256973110.cos.ap-shanghai.myqcloud.com/go.png" class="right"></image>
+    </view>
+    <view class="user-item" data-url="../feedback/feedback"  bindtap="Go">
+        <view class="left">
+            <image src="https://lg-5b8938g4-1256973110.cos.ap-shanghai.myqcloud.com/u6.png"></image>
+            <text>意见反馈</text>
+        </view>
+        <image src="https://lg-5b8938g4-1256973110.cos.ap-shanghai.myqcloud.com/go.png" class="right"></image>
+    </view>
+     <view class="user-item" data-url="../myfeedback/myfeedback"  bindtap="Go">
+        <view class="left">
+            <image src="https://lg-5b8938g4-1256973110.cos.ap-shanghai.myqcloud.com/u6.png"></image>
+            <text>我的反馈</text>
+        </view>
+        <image src="https://lg-5b8938g4-1256973110.cos.ap-shanghai.myqcloud.com/go.png" class="right"></image>
+    </view>
+  </view>
+  <!--列表-->
+</view>

@@ -1,0 +1,31 @@
+<!--pages/read/read.wxml-->
+<view class="container">
+    <view class="reading">
+        <block wx:if="{{read==''}}">
+            <view class="noact">
+                <image src="https://lg-5b8938g4-1256973110.cos.ap-shanghai.myqcloud.com/huodong.png"></image>
+                <view>目前还没有活动~</view>
+            </view>
+           
+        </block>
+        <block wx:else>
+             <view class="reading-item" wx:for="{{read}}" bindtap="apply" data-id="{{item.id}}">
+                <image src="{{item.cover}}" class="left" mode="aspectFill"></image>
+                <view class="right">
+                    <view class="title">{{item.title}}</view>
+                    <view class="time">
+                        <image src="https://lg-5b8938g4-1256973110.cos.ap-shanghai.myqcloud.com/biao.png"></image>
+                        <text>时间：{{item.start_time}}</text>
+                    </view>
+                    <view class="dw">
+                        <image src="https://lg-5b8938g4-1256973110.cos.ap-shanghai.myqcloud.com/dw.png"></image>
+                        <text>地点：{{item.address}}</text>
+                    </view>
+                    <view class="apply">
+                        <view >报名参加</view>
+                    </view>
+                </view>
+            </view>
+        </block>
+    </view>
+</view>

@@ -1,0 +1,139 @@
+/* pages/book/book.wxss */
+.container{
+    padding-bottom:20rpx;
+}
+.head{
+    width:100%;
+    height:100rpx;
+    line-height:100rpx;
+    position:relative;
+}
+.head .left{
+    margin-left:20rpx;
+}
+.head .left image{
+    width:36rpx;
+    height:34rpx;
+    vertical-align: middle;
+    margin-right:10rpx;
+}
+.head .right image{
+    width:60rpx;
+    height:60rpx;
+    border-radius:50%;
+    margin-top:20rpx;
+}
+.banner{
+    width:100%;
+}
+.banner image{
+    width:100%;
+    height:340rpx;
+    display: block;
+}
+.head .left text{
+    font-size:24rpx;
+    color:#396d5f;
+}
+.head .right{
+    position:absolute;
+    top:0;
+    right:20rpx;
+    font-size:24rpx;
+    color:#396d5f;
+}
+.container .matter{
+    width:100%;
+    padding-top:20rpx;
+}
+.container .matter .title{
+    margin-left:20rpx;
+    margin-bottom:20rpx;
+}
+.container .matter .title image{
+    width:28rpx;
+    height:28rpx;
+    margin-right:10rpx;
+    vertical-align: middle;
+}
+.container .matter .title text{
+    font-size:30rpx;
+    color:#396d5f;
+}
+.nav{
+    width:100%;
+    height:100rpx;
+    line-height: 100rpx;
+    border-bottom:1rpx solid #eeeeee;
+    }
+.nav .nav-item{
+    float: left;
+    height:92rpx;
+    font-size:28rpx;
+    color:#666666;
+    line-height:92rpx;
+}
+.nav .nav-item:nth-child(1){
+    margin-left:260rpx;
+}
+.nav .nav-item:nth-child(2){
+    margin-left:110rpx;
+}
+.nav .active{
+    color:#333333;
+    border-bottom:8rpx solid #3fb090;
+}
+.hide{
+    display: none;
+}
+.d-matter{
+    width:100%;
+}
+.d-matter .d-item{
+    overflow: hidden;
+    padding-top: 30rpx;
+    padding-bottom: 30rpx;
+ 
+}
+.d-matter .d-item .d-left{
+   float: left;
+   width:85rpx;
+   height:85rpx;
+   border-radius:10rpx;
+   display: block;
+   margin-left:40rpx;
+}
+.d-matter .d-item .d-right{
+    width:600rpx;
+    float: right;
+}
+.d-matter .d-item .d-right .words{
+    font-size:32rpx;
+    color:#333333;
+}
+.d-matter .d-item .d-right .d-bottom image{
+    width:31rpx;
+    height:23rpx;
+    display: inline-block;
+    vertical-align: middle;
+}
+.d-matter .d-item .d-right .d-bottom text{
+    font-size:24rpx;
+    color:#cccccc;
+    margin-left:14rpx;
+}
+.act-left{
+    width:31rpx;
+    height:23rpx;
+    float: left;
+    margin-left:40rpx;
+}
+.act-right{
+    width:560rpx;
+    float: left;
+    margin-left:10rpx;
+   font-size:28rpx;
+color:#333333;
+line-height:23rpx;
+
+}

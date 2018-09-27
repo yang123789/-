@@ -1,0 +1,40 @@
+/* pages/todayNotes/todayNotes.wxss */
+.container{padding:20rpx;}
+page{
+    background:#f5f5f5;
+}
+.k-lists{
+    width:100%;
+}
+.k-lists .k-item{
+    background:white;
+    border-radius:20rpx;
+    padding:20rpx 30rpx;
+    margin-bottom: 20rpx;
+}
+.k-lists .k-item .title{
+    font-size:30rpx;
+    color:#444444;
+    margin-bottom:10rpx;
+}
+.k-lists .k-item .content{
+    font-size:20rpx;
+    color:#aaaaaa;
+    margin-bottom: 10rpx;
+}
+.k-lists .k-item .content1{
+    font-size:22rpx;
+    color:#666;
+    margin-bottom: 10rpx;
+}
+.k-lists .k-item .time{
+    font-size:24rpx;
+    color:#aaaaaa;
+}
+.nonote{
+    font-size:36rpx;
+    color:#333;
+    margin-top:49%;
+    width:100%;
+    text-align: center;
+}

@@ -1,0 +1,200 @@
+/* pages/index/index.wxss */
+page{
+    background:#5d9a88;
+}
+.container{
+    padding:30rpx 20rpx;
+}
+.vip-card{
+    position:relative;
+    width:100%;
+    height:400rpx;
+    border-radius:40rpx;
+    box-shadow: 0rpx 0px 30px #3d6257;
+}
+.vip-card .cardbg{
+    width:100%;
+    height:100%;
+    position:absolute;
+    top:0;
+    left:0;
+}
+.vip-card .matter{
+    width:100%;
+    height:100%;
+    position:absolute;
+    top:0;
+    left:0;
+}
+.vip-card .matter .logo{
+    position:absolute;
+    top:10rpx;
+    left:45rpx;
+    width:106rpx;
+    height:117rpx;
+}
+.vip-card .matter .vip-text{
+    position: absolute;
+    right:46rpx;
+    top:20rpx;
+    font-size:24rpx;
+    color:#ffffff;
+    
+}
+.vip-card .matter .line-center{
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    font-size:36rpx;
+    color:#ffffff;
+}
+.vip-card .matter .vip-state{
+    position:absolute;
+    bottom:20rpx;
+    right:46rpx;
+    font-size:24rpx;
+    color:#ffffff;
+    display: none;
+}
+.vip-card .matter .vip-state text{
+    display: block;
+    line-height: 40rpx;
+    text-align: right;
+}
+.column{
+    width:100%;
+    overflow: hidden;
+    
+}
+.column .column-list{
+    margin-bottom:16rpx;
+    line-height: 160rpx;
+    display: block;
+    border-radius:10rpx;
+}
+.column .column-list .navimg{
+    width:124rpx;
+    height:117rpx;
+    vertical-align: middle;
+    margin-left:20rpx;
+}
+.column .column-list .nav-text{
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 30rpx;
+    color:#396d5f;
+    margin-left:12rpx;
+    margin-right:4rpx;
+}
+.column .column-list .navicon{
+    width:20rpx;
+    height:20rpx;
+    vertical-align: middle;
+}
+.column .left{
+     width:348rpx;
+    height:160rpx;
+    background:white;
+    float: left;
+}
+.column .right{
+    margin-left:363rpx;
+    height:160rpx;
+    background:white;
+}
+.column-box{
+    width:100%;
+    margin-top:50rpx;
+}
+.column-box .words{
+    font-size:32rpx;
+    color:#ffffff;
+    margin-bottom: 20rpx;
+}
+.recently{
+    width:100%;
+    background:#f6f6f6;
+    padding:10rpx 0rpx;
+    display: none;
+}
+.recently .listen .words{
+    margin-bottom:20rpx;
+}
+.recently .listen{
+    margin-bottom:16rpx;
+}
+.recently .listen .words image{
+    width:34rpx;
+    height:34rpx;
+    vertical-align: middle;
+    margin-left:10rpx;
+}
+.recently .listen .words  text{
+    font-size: 32rpx;
+    color:#396d5f;
+    vertical-align: middle;
+    margin-left:10rpx;
+}
+.recently .listen .listen-lists .listen-list{
+    overflow: hidden;
+    margin-bottom:12rpx;
+    padding-left:30rpx;
+    padding-right:30rpx;
+}
+.recently .listen .listen-lists .listen-list .left{
+    float: left;
+    width:34rpx;
+    height:34rpx;
+}
+.recently .listen .listen-lists .listen-list .right{
+    font-size:28rpx;
+    color:#666666;
+    width:600rpx;
+    float: right;
+    line-height: 34rpx;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
+.noactext{
+    font-size:30rpx;
+    color:#333;
+}
+.noact{
+    text-align: center;
+    font-size:30rpx;
+    color:#666;
+    padding-top:30rpx;
+    padding-bottom:30rpx;
+}
+.noactext{
+    text-align: center;
+    font-size:30rpx;
+    color:#666;
+    padding-top:30rpx;
+    padding-bottom:30rpx;
+}
+.blockm{
+    display: block;
+}
+.nonem{
+    display: none;
+}
+
+.vip-state button{
+    background:none;
+    font-size:24rpx;
+    color:#ffffff;
+    border:0;
+    padding:0;
+    line-height: 40rpx;
+    text-align: right;
+   
+}
+.vip-state button:after{
+    border:0;
+}
+.blocks{
+    display: block!important;
+}

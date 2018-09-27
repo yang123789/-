@@ -1,0 +1,5 @@
+<!--pages/feedback/feedback.wxml-->
+<view class="container">
+    <textarea placeholder='写点建议...' class="matter" bindinput="getmatter"></textarea>
+    <button class="submitbtn" bindtap="feedback">提交</button>
+</view>

@@ -1,0 +1,13 @@
+<!--pages/todayNotes/todayNotes.wxml-->
+<view class="container">
+    <view class="nonote" wx:if="{{myNote==''}}">您还没有做笔记哦~~</view>
+    <view class="k-lists" wx:else>
+        <view class="k-item" wx:for="{{myNote}}">
+            <view class="title">{{item.title}}</view>
+            <view class="content">{{item.content}}</view>
+            <view class="content1">笔记：{{item.note}}</view>
+            <view class="time">{{item.makenote_time}}</view>
+        </view>
+        
+    </view>
+</view>

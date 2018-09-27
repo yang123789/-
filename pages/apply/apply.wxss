@@ -1,0 +1,129 @@
+/* pages/apply/apply.wxss */
+.container .banner{
+    width:100%;
+    height:254rpx;
+}
+.container .section{
+    overflow: hidden;
+    padding:0 20rpx;
+    line-height: 60rpx;
+    margin-bottom: 30rpx;
+    margin-top:20rpx;
+}
+.apply-infor{
+    padding-top:30rpx;
+    padding-bottom: 50rpx;
+}
+.act-ditem{
+    text-indent: 2em;
+}
+.container .section text{
+    font-size:30rpx;
+    color:#396d5f;
+    width:14%;
+    float: left;
+}
+.container .section input{
+    width:79%;
+    float: left;
+    font-size:24rpx;
+    height:60rpx;
+    line-height: 60rpx;
+    border:1rpx solid #e8e8e8;
+    padding-left:20rpx;
+    padding-right:20rpx;
+    border-radius:20rpx;
+}
+.apply-infor{
+    width:100%;
+}
+.applybtn{
+    width:230rpx;
+    height:70rpx;
+    background:#396d5f;
+    color:white;
+    font-size:24rpx;
+    line-height: 70rpx;
+    border-radius:30rpx;
+    margin-top:50rpx;
+}
+.act-info{
+    width:100%;
+    text-align: center;
+    padding-top:40rpx;
+    padding-bottom:40rpx;
+    border-bottom: 1rpx solid #eee;
+}
+.act-info .img{
+    width:369rpx;
+    height:294rpx;
+    margin-bottom: 40rpx;
+    border-radius:10rpx;
+}
+.act-info .title{
+    font-size:32rpx;
+    color:#396d5f;
+    margin-bottom: 20rpx;
+}
+.act-info .price{
+    font-size:40rpx;
+    color:#396d5f;
+    font-weight: bold;
+}
+.act-info1{
+    width:100%;
+    padding-top:30rpx;
+    padding-bottom: 30rpx;
+    border-bottom: 1rpx solid #eee;
+}
+.act-info1 view{
+    padding-left:30rpx;
+    padding-right:30rpx;
+    font-size:28rpx;
+    color:#666;
+    margin-bottom:10rpx;
+}
+.act-info1 view:last-child{
+    margin-bottom: 0;
+}
+.act-info2{
+    width:100%;
+    border-bottom: 1rpx solid #eee;
+}
+.act-info2:last-child{
+    border-bottom: 0;
+}
+.act-info2 .words{
+    width:100%;
+    border-bottom: 1rpx solid #eee;
+    height:80rpx;
+    line-height: 80rpx;
+}
+.act-info2 .words text{
+    border-bottom: 5rpx solid #396d5f;
+    margin-left:30rpx;
+    display: inline-block;
+    height:80rpx;
+    padding-left:10rpx;
+    padding-right:10rpx;
+    font-size:32rpx;
+    color: #396d5f;
+}
+.act-info2 .act-detail{
+    font-size: 28rpx;
+    color:#666;
+    line-height: 50rpx;
+    padding:30rpx;
+}
+.sel-cupton{
+    font-size: 30rpx;
+    color:#396d5f;
+    padding-left:20rpx;
+    display: block;
+}
+.sel-cupton checkbox{
+   margin-right:10rpx;
+}
+.blocks{
+    display: block;
+}

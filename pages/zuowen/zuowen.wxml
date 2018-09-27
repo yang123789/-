@@ -1,0 +1,42 @@
+<!--pages/zuowen/zuowen.wxml-->
+<view class="container {{book.Fungread!=''?'blocks':''}}">
+  <view class="container1" wx:if="{{book.Fungread!=null}}">
+   <view class="audioplay-box">
+        <audio poster="{{book.Fungread.cover}}" name="{{book.Fungread.stitle}}" author="{{book.Fungread.auther}}" src="{{book.Fungread.audio}}" id="myAudio" controls loop bindtimeupdate="MusicStart" bindended="MusicEnd">
+        <view class="free-MusicProgress">
+            <view style="width:{{progress}}%;"></view>
+        </view>
+        </audio>
+    </view>
+    <view class="matter">
+        <image class="bgimg" src="https://lg-5b8938g4-1256973110.cos.ap-shanghai.myqcloud.com/zw.jpg" mode="aspectFill"></image>
+        <view style="position:relative;z-index:2;">
+            <view class="title">{{book.Fungread.title}}</view>
+            <view class="author">作者：{{book.Fungread.auther}}</view>
+            <view class="content" wx:for="{{carrt}}">{{item}}</view>
+        </view>
+        
+    </view>
+
+    <!--作文家-->
+    <view class="composition">
+        <view class="composition-lists">
+            <view class="composition-item" bindtap="gocomposition" wx:for="{{zuowen}}" data-id="{{item.id}}">
+                <image src="{{item.avatar}}" class="left"></image>
+                <view class="right">
+                    <view class="name">{{item.nickname}}</view>
+                    <view class="content">{{item.composition}}</view>
+                </view>
+            </view>
+        </view>
+        <view class="foot-empty" style="height:100rpx;"></view>
+        <view class="release" bindtap="gofabu" data-id="{{book.Fungread.id}}">
+            <input type="text" disabled="true"/>
+            <view class="release-btn">发布</view>
+        </view>
+    </view>
+    <!--作文家-->
+    </view>
+    <view wx:else class="container2">活动还未开始~</view>
+</view>
+

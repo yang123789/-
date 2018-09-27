@@ -1,0 +1,20 @@
+/* pages/sjtg/sjtg.wxss */
+.fillimg{
+    border-radius:20rpx;
+    overflow: hidden;
+    border:1rpx solid #eee;
+    margin-top:60rpx;
+    margin-bottom: 40rpx;
+    width:520rpx;
+    height:314rpx;
+}
+.filebtn{
+    width:200rpx;
+    height:70rpx;
+    text-align: center;
+    line-height:70rpx;
+    background:#396d5f;
+    color: white;
+    font-size:32rpx;
+    border-radius: 10rpx;
+}

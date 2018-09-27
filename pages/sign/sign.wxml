@@ -1,0 +1,71 @@
+<!--pages/sign/sign.wxml-->
+<view class="container">
+    <view class="rules" bindtap="openrules">
+        <image src="https://lg-5b8938g4-1256973110.cos.ap-shanghai.myqcloud.com/gg.png"></image>
+    </view>
+    <view class="cloud">
+        <image src="https://lg-5b8938g4-1256973110.cos.ap-shanghai.myqcloud.com/yun.png" class="animate1"></image>
+        <image src="https://lg-5b8938g4-1256973110.cos.ap-shanghai.myqcloud.com/yun.png" class="animate2"></image>
+        <image src="https://lg-5b8938g4-1256973110.cos.ap-shanghai.myqcloud.com/yun.png" class="animate3"></image>
+        <image src="https://lg-5b8938g4-1256973110.cos.ap-shanghai.myqcloud.com/yun.png" class="animate4"></image>
+        <image src="https://lg-5b8938g4-1256973110.cos.ap-shanghai.myqcloud.com/yun.png" class="animate5"></image>
+    </view>
+    <view class="sign-lists">
+        <view class="sign-item">
+            <image src="https://lg-5b8938g4-1256973110.cos.ap-shanghai.myqcloud.com/si1.png"></image>
+            <view>( {{ past.grass }} )</view>
+        </view>
+        <view class="sign-item">
+            <image src="https://lg-5b8938g4-1256973110.cos.ap-shanghai.myqcloud.com/si2.png"></image>
+             <view>( {{ past.sleep }} )</view> 
+        </view>
+        <view class="sign-item" bindtap="goread">
+            <image src="https://lg-5b8938g4-1256973110.cos.ap-shanghai.myqcloud.com/si3.png"></image>
+            <view>( {{ past.market }} )</view> 
+        </view>
+        <view class="sign-item" bindtap="task">
+            <image src="https://lg-5b8938g4-1256973110.cos.ap-shanghai.myqcloud.com/si4.png"></image>
+        </view>
+    </view>
+    <view class="foot">
+        <image src="https://lg-5b8938g4-1256973110.cos.ap-shanghai.myqcloud.com/yang.png"></image>
+    </view>
+    <view class="task-mask {{showmask?'showmask':''}}">
+        <view class="task-box">
+            <image src="https://lg-5b8938g4-1256973110.cos.ap-shanghai.myqcloud.com/close.png" class="close" bindtap="closetask"></image>
+            <view class="word">日推小任务</view>
+            
+            <view class="title">{{sign.question}}</view>
+            <!-- (<text wx:for="{{checkvalue}}">{{item}}</text>) -->
+            
+            <view class="task-lists">
+            <checkbox-group bindchange="checkboxChange">
+                <view class="task-item">
+                    <checkbox value="{{sign.A}}" checked="{{item.checked}}"/>{{sign.A}}</view>
+                    <view class="task-item">
+                    <checkbox value="{{sign.B}}" checked="{{item.checked}}"/>{{sign.B}}</view>
+                    <view class="task-item">
+                    <checkbox value="{{sign.C}}" checked="{{item.checked}}"/>{{sign.C}}</view>
+                    <view class="task-item">
+                    <checkbox value="{{sign.D}}" checked="{{item.checked}}"/>{{sign.D}}</view>
+                </checkbox-group>
+            </view>
+            <view class="yesbtn">
+                <button bindtap="subanswer">确认</button>
+            </view>
+        </view>
+    </view>
+    <!--rules弹框-->
+        <view class="rules-mask {{rulesbtn?'rulesblocks':''}}">
+            <view class="rules-box">
+             <image src="https://lg-5b8938g4-1256973110.cos.ap-shanghai.myqcloud.com/close.png" class="closerules" bindtap="closerules"></image>
+                <view class="rules-title">规则</view>
+                <view class="rules-matter">
+                <text>1、完成日推小任务，种下一棵草</text>
+                <text>2、连续七棵草，送你一只羊</text>
+                <text>3、赶集喽！一只羊抵线下读书会10元（可累计使用，三个月内清空）</text>
+                </view>
+            </view>
+        </view>
+    <!--rules弹框-->
+</view>

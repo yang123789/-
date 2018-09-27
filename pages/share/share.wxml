@@ -1,0 +1,8 @@
+<!--pages/share/share.wxml-->
+<view class="share">
+    <view class="card-box">
+        <canvas canvas-id="shareCanvas" style="width:750rpx;height:1200rpx" class="canvasimg" disable-scroll="true" bindtouchstart="touchStart" bindtouchmove="touchMove" bindtouchend="touchEnd"></canvas>
+        <button  open-type="openSetting" class="savebtn" wx:if="{{setting}}">保存图片</button>
+        <button  bindtap="scimg" class="savebtn" wx:else>保存图片</button>
+    </view>
+</view>

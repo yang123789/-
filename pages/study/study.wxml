@@ -1,0 +1,75 @@
+<!--pages/study/study.wxml-->
+<view class="container">
+    <view class="matter">
+        <view class="head">
+            <text class="title">我的讲坛</text>
+            <view class="integral" bindtap="gointegral">
+                <image src="{{studylist.avatar}}" class="uimg"></image>
+                <text class="unumber">{{studylist.credit}}分</text>
+                <image src="https://lg-5b8938g4-1256973110.cos.ap-shanghai.myqcloud.com/goimg.png" class="goimg"></image>
+            </view>
+        </view>
+        <view class="content">
+        <!--未报名-->
+        <block wx:for="{{studylist.forum}}">
+        <view class="all"  bindtap="gonoapply" wx:if="{{item.state==1}}" data-id="{{item.id}}">
+            <view class="all-item">
+                <image src="{{item.cover}}" mode="aspectFill"></image>
+                <view class="study-state">{{item.state_msg}}</view>
+            </view>
+        </view>
+        <!--未报名-->    
+        <!--完整课程-->
+        <view class="all" bindtap="gofull" wx:elif="{{item.state==3}}" data-id="{{item.id}}">
+            <view class="all-item">
+                <image src="{{item.cover}}" mode="aspectFill"></image>
+                <view class="study-state">{{item.state_msg}}</view>
+            </view>
+        </view>
+        <!--完整课程-->
+        <!--正在学习-->
+        <view class="little"  wx:else>
+            <view class="little-item">
+                <view class="l-img" bindtap="goGoing" data-id="{{item.id}}">
+                    <image src="{{item.cover}}" mode="aspectFill"></image>
+                    <view class="study-state">{{item.state_msg}}</view>
+                </view>
+                <view class="bottom-box">
+                    <view class="bottom">
+                        <view class="progress">
+                            <view class="progress-bar" style="width:{{item.schedule}}"></view>
+                        </view>
+                        <view class="pro-text">已学习{{item.schedule}}</view>
+                        <view class="course">
+                            <image src="{{item.avatar}}" class="left"></image>
+                            <view class="right">
+                                <view class="name">主讲老师：{{item.name}}</view>
+                                <view class="title">{{item.nowStudy.periods}}　{{item.nowStudy.title}}</view>
+                                <view class="matter">{{item.nowStudy.content}}</view>
+                            </view>
+                            <button class="jxbtn" wx:if="{{item.nowStudy!=0}}" data-id="{{item.nowStudy.id}}" bindtap="goAnswer">继续学习</button>
+                        </view>
+                    </view>
+                </view>
+            </view>
+            
+        </view>
+        <!--正在学习-->
+        </block>
+        </view>
+    </view>
+    <view class="footer">
+        <navigator class="footer-item active" url="../study/study">
+            <image src="https://lg-5b8938g4-1256973110.cos.ap-shanghai.myqcloud.com/s4.png"></image>
+            <view>学习</view>
+        </navigator>
+        <navigator class="footer-item" url="../notes/notes">
+            <image src="https://lg-5b8938g4-1256973110.cos.ap-shanghai.myqcloud.com/s2.png"></image>
+            <view>笔记</view>
+        </navigator>
+        <navigator class="footer-item" url="../mine/mine">
+            <image src="https://lg-5b8938g4-1256973110.cos.ap-shanghai.myqcloud.com/s3.png"></image>
+            <view>我的</view>
+        </navigator>
+    </view>
+</view>

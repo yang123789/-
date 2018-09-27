@@ -1,0 +1,22 @@
+<!--pages/giving/giving.wxml-->
+<view class="container">
+    <view class="giving">
+        <view class="title">木耳读书会员</view>
+        <view class="number">
+            <view class="left">赠送数量</view>
+            <view class="right num-handle">
+                <view class="jian" bindtap="jian">－</view>
+                <input type="text" value="{{money}}"/>
+                <view class="add" bindtap="add">＋</view>
+            </view>
+        </view>
+        <view class="number">
+            <view class="left">支付金额</view>
+            <view class="right num">
+               ￥{{allprice}}
+            </view>
+        </view>
+        <button class="pay-btn" disabled="{{givingbtn}}" bindtap="giving">确认支付</button>
+    </view>
+    
+</view>

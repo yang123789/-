@@ -1,0 +1,31 @@
+/* pages/records/records.wxss */
+.records-lists{
+    width:100%;
+    /* padding:30rpx 0; */
+}
+.records-item>view{
+    position:relative;
+    padding:20rpx 30rpx;
+    border-bottom: 1rpx solid #eee;
+}
+.records-item .name{
+    font-size:36rpx;
+    color:#333;
+    margin-bottom:10rpx;
+}
+.records-item .price{
+    font-size:30rpx;
+    color:#999;
+}
+.records-item button{
+    width:160rpx;
+    height:70rpx;
+    line-height: 70rpx;
+    font-size:30rpx;
+    color:#fff;
+    background:#396d5f;
+    position: absolute;
+    top:50%;
+    margin-top:-35rpx;
+    right:30rpx;
+}

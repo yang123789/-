@@ -1,0 +1,14 @@
+<!--pages/sjtg/sjtg.wxml-->
+<view class="container">
+<!-- <view class="fillimg">
+                <image src="{{source}}" mode="aspecFill" />
+              </view>
+            <view bindtap="listenerButtonChooseImage" class="chooseimg">
+             上传图片
+              
+            </view> -->
+            
+<canvas canvas-id="photo_canvas" style="width:{{canvasWidth}}px;height:{{canvasHeight}}px;position: absolute;left:-300px;top:-300px;"></canvas>
+<image style="width:{{canvasWidth}}px;height:{{canvasHeight}}px;" src='{{bbb}}' class="fillimg"></image>
+<view bindtap='aa' class="filebtn">投稿</view>
+</view>

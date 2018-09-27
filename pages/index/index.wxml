@@ -1,0 +1,92 @@
+<!--pages/index/index.wxml-->
+<view class="container">
+  <!--会员卡-->
+  <view class="vip-card">
+    <image src="https://lg-5b8938g4-1256973110.cos.ap-shanghai.myqcloud.com/vipcard.png" class="cardbg"></image>
+    <view class="matter">
+      <image src="https://lg-5b8938g4-1256973110.cos.ap-shanghai.myqcloud.com/logo.png" class="logo"></image>
+      <navigator class="vip-text" target="miniProgram" app-id="wx6ef8efebdeb9601d" version="release"  open-type='navigate' path="pages/home/dashboard/index">会员专享</navigator>
+      
+
+      <text class="line-center">和小木耳一起读书吧</text>
+      <view class="vip-state {{group?'blocks':''}}">
+        <view wx:if="{{group.group_id!=2}}">
+        <button bindtap='zsVip'>赠送朋友</button>
+        <button  bindtap='BuyVip' disabled="{{buyvipbtn}}">成为会员</button>
+        </view>
+        <view wx:else>
+          <button bindtap='xfVip' disabled="{{xfvipbtn}}">续费</button>
+          <button bindtap='zsVip'>赠送朋友</button>
+          <text>有效期至{{group.time}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!--会员卡-->
+  <!--栏目-->
+  <view class="column-box">
+    <view class="words">栏目:</view>
+    <view class="column">
+      <view class="column-list left" data-url="../book/book" bindtap="Go">
+        <image src="https://lg-5b8938g4-1256973110.cos.ap-shanghai.myqcloud.com/nav1.png" class="navimg"></image>
+        <text class="nav-text">小木耳读书</text>
+        <image src="https://lg-5b8938g4-1256973110.cos.ap-shanghai.myqcloud.com/n1.png" class="navicon"></image>
+      </view>
+      <view class="column-list right" data-url="../sign/sign" bindtap="Go">
+        <image src="https://lg-5b8938g4-1256973110.cos.ap-shanghai.myqcloud.com/nav2.png" class="navimg"></image>
+        <text class="nav-text">天天种草</text>
+        <image src="https://lg-5b8938g4-1256973110.cos.ap-shanghai.myqcloud.com/n2.png" class="navicon"></image>
+      </view>
+      <view class="column-list left" data-url="../study/study" bindtap="Go">
+        <image src="https://lg-5b8938g4-1256973110.cos.ap-shanghai.myqcloud.com/nav3.png" class="navimg"></image>
+        <text class="nav-text">木耳讲坛</text>
+        <image src="https://lg-5b8938g4-1256973110.cos.ap-shanghai.myqcloud.com/n3.png" class="navicon"></image>
+      </view>
+      <view class="column-list right" data-url="../read/read" bindtap="Go">
+        <image src="https://lg-5b8938g4-1256973110.cos.ap-shanghai.myqcloud.com/nav4.png" class="navimg"></image>
+        <text class="nav-text">木耳读书会</text>
+        <image src="https://lg-5b8938g4-1256973110.cos.ap-shanghai.myqcloud.com/n4.png" class="navicon"></image>
+      </view>
+    </view>
+  </view>
+  <!--栏目-->
+  <view class="recently {{group.group_id==2?'blockm':''}}">
+    <!--最近收听-->
+    <view class="listen">
+      <view class="words">
+        <image src="https://lg-5b8938g4-1256973110.cos.ap-shanghai.myqcloud.com/r1.png"></image>
+        <text>最近收听</text>
+      </view>
+      <view class="listen-lists">
+        <block wx:if="{{act!=''}}">
+          <view class="listen-list" wx:for="{{act}}" bindtap="goact" data-dtype="{{item.dtype}}" data-dtime="{{item.daytime}}">
+            <image src="https://lg-5b8938g4-1256973110.cos.ap-shanghai.myqcloud.com/erji.png" class="left"></image>
+            <text class="right">{{item.type}}</text>
+          </view>
+        </block>
+        <block wx:else>
+          <view class="noact">
+            <text>您还没有收听内容哦~</text>
+          </view>
+        </block>
+      </view>
+    </view>
+    <!--近期活动-->
+    <view class="listen">
+      <view class="words">
+        <image src="https://lg-5b8938g4-1256973110.cos.ap-shanghai.myqcloud.com/r2.png"></image>
+        <text>近期活动</text>
+      </view>
+      <view class="listen-lists" wx:if="{{newact!=''}}">
+        <view class="listen-list" wx:for="{{newact}}" data-dtype="{{item.dtype}}" data-daytime="{{item.daytime}}" bindtap="gomr">
+          <image src="https://lg-5b8938g4-1256973110.cos.ap-shanghai.myqcloud.com/qiqiu.png" class="left"></image>
+          <text class="right">{{item.type}}</text>
+        </view>
+         
+      </view>
+      <view wx:else class="noactext">还没有近期活动~~</view>
+    </view>
+    <!--近期活动-->
+    <!--近期活动-->
+  </view>
+</view>

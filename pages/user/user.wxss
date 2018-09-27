@@ -1,0 +1,88 @@
+/**index.wxss**/
+.userinfo {
+    width:100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+background:-moz-linear-gradient(top, #396d5f, #6da97f);  
+background:-webkit-gradient(linear, 0 0, 0 bottom, from(#396d5f), to(#6da97f));  
+background:-o-linear-gradient(top, #396d5f, #6da97f); 
+padding-top:40rpx;
+padding-bottom:40rpx;
+}
+
+.userinfo-avatar {
+  width: 146rpx;
+  height: 146rpx;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 20rpx;
+}
+
+.userinfo-nickname {
+  color: #ffffff;
+  font-size: 30rpx;
+}
+.getuserbtn{
+    background:none;
+    padding:0!important;
+    color: #ffffff;
+    font-size: 30rpx;
+}
+.getuserbtn::after{
+    border:0;
+}
+.v-text{
+    background:#fff;
+    color:#396d5f;
+    font-size:20rpx;
+    padding:4rpx 18rpx;
+    border-radius:18rpx;
+    margin-top:14rpx;
+    display: none;
+}
+.user-lists{
+    width:100%;
+}
+.user-lists .user-item{
+    position:relative;
+    padding-right:70rpx;
+    height:100rpx;
+    line-height: 100rpx;
+    border-bottom: 1rpx solid #eee;
+}
+.user-lists .user-item .left{
+    width:100%;
+    overflow: hidden;
+    
+}
+.user-lists .user-item .left image{
+    width:50rpx;
+    height:50rpx;
+    vertical-align: middle;
+    margin-left:13rpx;
+    margin-right:20rpx;
+}
+.user-lists .user-item .left text{
+    font-size:30rpx;
+    color:#232323;
+    vertical-align: middle;
+}
+.user-lists .user-item .right{
+    position:absolute;
+    top:38rpx;
+    right:38rpx;
+    width:14rpx;
+    height:24rpx;
+}
+.loginbtn{
+    padding:0;
+    font-size:30rpx;
+    color:#333;
+    height:50rpx;
+    line-height: 50rpx;
+    width:180rpx;
+}
+.blocks{
+    display: block;
+}

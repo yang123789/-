@@ -1,0 +1,27 @@
+<!--pages/full/full.wxml-->
+<view class="container {{studylist!=''?'c-block':''}}">
+     <view class="o-info">
+        <view class="top">
+            <view class="title">{{studylist.title}}</view>
+            <view class="name">
+                <image src="https://lg-5b8938g4-1256973110.cos.ap-shanghai.myqcloud.com/js.png"></image>
+                <text>主讲讲师：{{studylist.name}}</text>
+            </view>
+            
+        </view>
+        <image src="{{studylist.cover}}" mode="aspectFill" class="img"></image>
+    </view>
+     <view class="matter">
+        <view class="title">
+            <image src="https://lg-5b8938g4-1256973110.cos.ap-shanghai.myqcloud.com/shu.png"></image>
+            <text>课程</text>
+        </view>
+        <view class="lists">
+            <block wx:for="{{studylist.course}}" wx:for-item="course" wx:key="course">
+            <view class="full-item" bindtap="goAnswer" data-id="{{course.id}}">
+                {{course.periods}}：{{course.title}}
+            </view>
+            </block>
+        </view>
+    </view>
+</view>

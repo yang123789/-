@@ -1,0 +1,163 @@
+/* pages/radio/radio.wxss */
+.container{
+    padding-bottom:300rpx;
+}
+.rules-mask{
+    width:100%;
+    height:100%;
+    position: fixed;
+    z-index:99;
+    background: rgba(0, 0, 0, 0.4);
+    display: none;
+}
+.rulesblocks{
+    display: block;
+}
+.rules-mask .rules-box{
+    width:600rpx;
+    height:auto;
+    margin-top:30%;
+    background: white;
+    border-radius:20rpx;
+    margin-left:auto;
+    margin-right: auto;
+    padding:30rpx;
+    position: relative;
+}
+.rules-mask .rules-box .rules-title{
+    font-size:36rpx;
+    color:#396d5f;
+    margin-bottom: 10rpx;
+}
+.rules-mask .rules-box .rules-matter{
+    font-size: 30rpx;
+    color: #333;
+    line-height:50rpx;
+}
+.rules-mask .rules-box .rules-matter text{
+    display: block;
+}
+.rules{
+    position: absolute;
+    left:40rpx;
+    top:60rpx;
+    z-index: 99;
+}
+.rules image{
+    width:90rpx;
+    height:90rpx;
+}
+.ruless{
+    width:100%;
+    text-align: right;
+    border-bottom:1rpx solid #eee;
+    padding-top:20rpx;
+    padding-bottom:20rpx;
+   
+}
+.closerules{
+    width:60rpx;
+    height:60rpx;
+    position: absolute;
+    top:-10rpx;
+    right:-10rpx;
+}
+.ruless text{
+    
+     text-align: center;
+     padding:20rpx;
+     border-radius:50%;
+    background:#396d5f;
+    color:white;
+    font-size:26rpx;
+    display: inline-block;
+    margin-right:20rpx;
+}
+.audio-box{
+    width:130rpx;
+    height:35rpx;
+    background:#396d5f;
+    position:relative;
+    border-radius:10rpx;
+}
+
+.audio-box .speak-style{
+    width:20rpx;
+    height:20rpx;
+    position:absolute;
+    top:5rpx;
+    left:10rpx;
+}
+.audio-box .speak-style image{
+    width:100%;
+    height:100%;
+    display: block;
+    position:absolute;
+    top:0;
+    left:0;
+}
+.audio-box .speak-style .yin{
+    display:none;
+}
+.radio-lists{
+    width:100%;
+}
+.radio-item{
+    padding:20rpx 110rpx 20rpx 50rpx;
+    border-bottom:1rpx solid #eee;
+    position:relative;
+}
+.radio-item .left{
+    overflow: hidden;
+    width:100%;
+}
+.radio-item .left .img{
+    width:125rpx;
+    height:125rpx;
+    border-radius:50%;
+    display: block;
+    float: left;
+}
+.radio-item .left .info{
+    width:420rpx;
+    float:right;
+    margin-top:10rpx;
+}
+.radio-item .left .info .name{
+    font-size:30rpx;
+    color:#396d5f;
+    margin-bottom:4rpx;
+    overflow: hidden;/*超出部分隐藏*/
+    white-space: nowrap;/*不换行*/
+    text-overflow:ellipsis;/*超出部分文字以...显示*/
+}
+.radio-item .left .info .content{
+    font-size:24rpx;
+    color:#8f8f8f;
+    margin-bottom:4rpx;
+    overflow: hidden;/*超出部分隐藏*/
+    white-space: nowrap;/*不换行*/
+    text-overflow:ellipsis;/*超出部分文字以...显示*/
+}
+.radio-item .right{
+    position:absolute;
+    right:20rpx;
+    top:68rpx;
+    font-size:24rpx;
+    color:#396d5f;
+}
+.radio-item .right button{
+    background:none;
+    padding:0;
+    margin:0;
+    font-size:24rpx;
+    color:#396d5f;
+}
+.radio-item .right button:after{
+    border:0;
+}
+.noma{
+    font-size:30rpx;
+    color:#666;
+    margin-top:40%;
+}

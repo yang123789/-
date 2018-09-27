@@ -1,0 +1,45 @@
+<!--pages/shuji/shuji.wxml-->
+<view class="container {{book.secretary!=''?'blocks':''}}">
+  <view class="container1" wx:if="{{book.secretary!=null}}">
+   <!--木耳书记-->
+    <view class="secretary">
+        <view class="title">{{book.title}}</view>
+        <view class="lists">
+            <view class="s-item" wx:for="{{book.secretary}}">
+                <image src="{{item.photo}}" class="img" mode="aspectFill"></image>
+                <view class="name">
+                    <image src="https://lg-5b8938g4-1256973110.cos.ap-shanghai.myqcloud.com/xz.png"></image>
+                    <text>{{item.auther}}</text>
+                </view>
+            </view>
+        </view>
+    </view>
+   <!--木耳书记-->
+    <!--往期-->
+    <view class="past-box" >
+        <view class="past">
+            <view class="title">------------------------ 往期 ------------------------</view>
+            <view class="past-lists">
+                <block wx:if="{{book.old!=''}}">
+                    <view class="past-item" wx:for="{{book.old}}" bindtap="oldDetail" data-time="{{item.time}}">
+                        <image src="{{item.photo}}" class="left"></image>
+                        <view class="right">{{item.title}}</view>
+                    </view>
+                </block>
+                <block wx:else>
+                <view class="no-past" >您还没有往期节目哦~~</view>
+                </block>
+            </view>
+        </view>
+    </view>
+    <!--往期-->
+   
+</view>
+    <view wx:else class="container2">活动还未开始~</view>
+    <view class="foot-empty" style="height:100rpx;"></view>
+    <view class="release" bindtap="gofile">
+        <input type="text" disabled="true"/>
+        <view class="release-btn">投稿</view>
+    </view>
+   
+</view>
